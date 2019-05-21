@@ -20,6 +20,5 @@ window.addEventListener('beforeunload', () => {
 });
 
 document.querySelector('button').addEventListener('click', () => {
-  localStorage.setItem('time', 0);
   count = 0;
 });
