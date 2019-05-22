@@ -1,0 +1,32 @@
+body {
+  background: lightsteelblue;
+}
+
+h1 {
+  color: olivedrab;
+  text-align: center;
+  font-size: 3em;
+  text-wrap: normal;
+}
+
+.wrapper {
+  padding: 0 6em;
+  display: flex;
+  justify-items: center;
+}
+
+.amount {
+  margin: auto;
+  font-size: 1em;
+}
+
+@keyframes onTimerAnimation {
+  from {
+    transform: scale(2);
+    color: red;
+  }
+  to {
+    transform: scale(1);
+    color: black;
+  }
+}
