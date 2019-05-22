@@ -1,0 +1,41 @@
+body {
+  background: lightsteelblue; }
+
+h1 {
+  color: olivedrab;
+  text-align: center;
+  font-size: 3em;
+  text-wrap: normal; }
+
+.wrapper {
+  padding: 0 6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center; }
+
+.amount {
+  margin: auto;
+  font-size: 1em; }
+
+@-webkit-keyframes onTimerAnimation {
+  from {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    color: red; }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: black; } }
+
+@keyframes onTimerAnimation {
+  from {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    color: red; }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: black; } }
+
+/*# sourceMappingURL=main.css.map */
