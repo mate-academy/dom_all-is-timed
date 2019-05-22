@@ -1,7 +1,7 @@
 'use strict';
    
 const body = document.body;
-const save = window.sessionStorage;
+const save = window.localStorage;
 let timer = save.getItem('timer') || 0;
 
 const time = () => {
