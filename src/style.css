@@ -1,0 +1,25 @@
+body {
+  height: 100vh;
+  user-select: none;
+}
+
+.timing {
+  border: 1px solid grey;
+  width: 150px;
+  padding: 5px;
+  display: grid;
+  grid-template-rows: repeat(3, 50px);
+  justify-content: center;
+  background-color: rgba(96, 161, 161, 0.17);
+}
+
+.counter {
+  text-align: right;
+  line-height: 50px;
+  font-size: 25px;
+  justify-self: center;
+}
+
+.second {
+  justify-self: end;
+}
