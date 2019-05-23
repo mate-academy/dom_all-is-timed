@@ -1,0 +1,8 @@
+body {
+  height: 100vh;
+  user-select: none;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
