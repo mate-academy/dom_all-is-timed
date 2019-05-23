@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 800;
+}
+
+span {
+  font-size: 50px;
+  margin-left: 20px;
+}
