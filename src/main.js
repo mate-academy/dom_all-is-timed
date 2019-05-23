@@ -1,7 +1,7 @@
 const timer = document.querySelector('.timer');
 const storage = window.localStorage;
 
-document.addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', () => {
   let second = storage.getItem('second') || 0;  
   timer.innerHTML = second;
   
