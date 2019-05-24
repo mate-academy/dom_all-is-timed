@@ -22,5 +22,5 @@ function numberIncrement(time) {
     count++;
     localStorage.setItem(COUNT, count);
     number.textContent = count;
-    }, time);
+  }, time);
 }
