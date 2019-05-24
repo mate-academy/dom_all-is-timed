@@ -5,4 +5,4 @@
 2) Modify the counter so that it _never_ resets: each time the user visits the page, the initial number of seconds he sees is the number of seconds he has already spent on the page. The timer then increases the number by 1 every second, just as it did before.
 
 ##Result
-[link to gh-pages](<http://allistimes.github.io/>)
+[link to gh-pages] <https://tregubovvitaliykharkov.github.io/>
