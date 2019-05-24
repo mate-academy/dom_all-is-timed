@@ -1,25 +1,20 @@
-let count = localStorage.getItem('time');
-if(!count) {
-  count = 0;
-}
+let count = localStorage.getItem('time') || 0;
+const timeValue = document.querySelector('#timeValue')
 
-const htmlCount = document.createElement('p')
+render(count)
 
 setInterval(() => {
-  count++;
-  let seconds = count % 60;
-  if(seconds < 10) {
-    seconds = '0' + seconds;
-  }
-  htmlCount.innerHTML = `General time at this site is: ${Math.floor(count / 60)}:${seconds}`;
-  document.querySelector('body').prepend(htmlCount);
+  render(count++); 
 }, 1000);
+
+function render (count, el = timeValue) {
+  el.innerHTML = `${Math.floor(count / 60)}:${String(count % 60).padStart(2, '0')}`
+}
 
 window.addEventListener('beforeunload', () => {
   localStorage.setItem('time', `${count}`);
 });
 
 document.querySelector('button').addEventListener('click', () => {
-  localStorage.setItem('time', 0);
   count = 0;
 });
