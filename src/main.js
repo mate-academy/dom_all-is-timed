@@ -6,12 +6,12 @@ const number = document.getElementById('count');
 const COUNT = 'count';
 
 function main(){
-  numberSet();
+  numberSet(0);
   numberIncrement(1000);
 }
-function numberSet() {
+function numberSet(initalValue) {
   if (!localStorage.getItem(COUNT)) {
-    localStorage.setItem(COUNT, 0);
+    localStorage.setItem(COUNT, initalValue);
   }
   number.textContent = localStorage.getItem(COUNT);
 }
