@@ -3,21 +3,24 @@
 window.addEventListener('load', main);
 
 const number = document.getElementById('count');
+const COUNT = 'count';
 
 function main(){
   numberSet();
-  numberIncrement();
+  numberIncrement(1000);
 }
 function numberSet() {
-  if (!localStorage.count) {
-    localStorage.setItem('count', 0);
+  if (!localStorage.getItem(COUNT)) {
+    localStorage.setItem(COUNT, 0);
   }
-  number.textContent = localStorage.count;
+  number.textContent = localStorage.getItem(COUNT);
 }
 
-function numberIncrement() {
+function numberIncrement(time) {
+  let count = localStorage.getItem(COUNT);
   setInterval(() => { 
-    localStorage.count++;
-    number.textContent = localStorage.count;
-    }, 1000);
+    count++;
+    localStorage.setItem(COUNT, count);
+    number.textContent = count;
+    }, time);
 }
