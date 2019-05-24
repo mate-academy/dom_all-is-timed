@@ -1,10 +1,13 @@
 const time = document.querySelector('#timeSpent');
+let count = +localStorage.getItem('time') || 0;
 
-window.addEventListener('load', function() {
-    let count = +localStorage['time'];
+window.addEventListener('load', function () {
     setInterval(function () {
         count += 1;
         time.textContent = count;
-        localStorage['time'] =  count;
-    } , 1000);
+    }, 1000);
+});
+
+window.addEventListener('unload', function () {
+    localStorage.setItem('time',  `${count}`);
 });
