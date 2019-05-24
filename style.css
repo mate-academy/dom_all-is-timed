@@ -1,0 +1,9 @@
+ body{
+   display: flex;
+   height: 100vh;
+   background-color: #eee;
+ }
+ .container{
+   margin: auto;
+   font-size: calc(40px + 5vh + 5vw);
+ }
