@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.counter {
+  font-size: 150px;
+  color: gray;
+  user-select: none;
+
+}
