@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  position: relative; }
+
+.counterStyles {
+  display: inline-block;
+  background-color: red;
+  border: 3px solid green;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: yellow;
+  font-size: 100px; }

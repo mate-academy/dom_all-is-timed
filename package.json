@@ -1,0 +1,26 @@
+{
+  "name": "dom_all-is-timed",
+  "version": "1.0.0",
+  "description": "1) Using `setInterval`, create a page that would display the number of seconds the user spent on it. It will start by displaying `0`, after 1 second it will replace `0` with `1`, after another second it will show `2` and so on.",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.5"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OlhaMazurenko/dom_all-is-timed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OlhaMazurenko/dom_all-is-timed/issues"
+  },
+  "homepage": "https://github.com/OlhaMazurenko/dom_all-is-timed#readme"
+}
