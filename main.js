@@ -8,6 +8,12 @@ function main(){
   numberSet();
   numberIncrement();
 }
+function numberSet() {
+  if (!localStorage.count) {
+    localStorage.setItem('count', 0);
+  }
+  number.textContent = localStorage.count;
+}
 
 function numberIncrement() {
   setInterval(() => { 
@@ -15,13 +21,3 @@ function numberIncrement() {
     number.textContent = localStorage.count;
     }, 1000);
 }
-
-function numberSet() {
-  if (!localStorage.count) {
-    localStorage.count = 0;
-  }
-  number.textContent = localStorage.count;
-}
-
-
-
