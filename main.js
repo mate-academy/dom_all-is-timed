@@ -1,5 +1,5 @@
 const p = document.querySelector("#sec");
-const storage = sessionStorage;
+const storage = window.localStorage;
  
 let counter = storage.getItem("timeinsec");
 if(!counter) {
