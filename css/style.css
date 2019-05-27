@@ -1,0 +1,32 @@
+body {
+  background-color: lime;
+  text-align: center;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 300px;
+  height: 150px;
+  margin-top: 100px;
+  background-color: darkviolet;
+}
+
+.clockIsTimed {
+  color: #fff;
+  font-size: 3em;
+  line-height: 150px;
+  margin-bottom: 30px;
+}
+
+.clear {
+  padding: 10px;
+  text-decoration: none;
+  background-color: lightskyblue;
+  color: #fff;
+}
+
+.clear:hover {
+  trasition: all 1s;
+  background-color: yellow;
+  color: #000;
+}
