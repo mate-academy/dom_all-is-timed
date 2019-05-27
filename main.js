@@ -1,5 +1,5 @@
 const p = document.querySelector("#sec");
-const storage = sessionStorage;
+const storage = window.localStorage;
  
 let counter = storage.getItem("counter") || 0;
  
@@ -13,5 +13,5 @@ const counting =() => {
 	 storage.setItem("counter", counter);
  }
  
-setInterval("click", counting);
+setInterval(counting, 1000);
 renderCounter();
