@@ -1,15 +1,17 @@
 const p = document.querySelector("#sec");
-const storage = window.localStorage;
+const storage = sessionStorage;
  
-let counter = storage.getItem("timeinsec");
-if(!counter) {
-    counter = 0;
-    storage.setItem("timeinsec", 0);
+let counter = storage.getItem("counter") || 0;
+ 
+const counting =() => {
+    counter++;
+	renderCounter();
 }
  
-p.innerHTML = counter;
-setInterval(() => {
-    counter++;
-    p.innerHTML = counter;
-    storage.setItem("timeinsec", counter);
-}, 1000);
+ function renderCounter() {
+	 p.innerHTML = counter;
+	 storage.setItem("counter", counter);
+ }
+ 
+setInterval("click", counting);
+renderCounter();
