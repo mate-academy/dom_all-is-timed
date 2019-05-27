@@ -1,12 +1,13 @@
 const timer = document.getElementById('timer');
 
-window.onload = () => {
+window.addEventListener('load', () => {
+    const writeTextContent = (elem, content) => elem.textContent = content;
     let timerCount = localStorage.getItem('timerCount') || 0;
-    timer.textContent = timerCount;
+    writeTextContent(timer, timerCount)
        
     setInterval(function(){
         timerCount++;
-        timer.textContent = timerCount;
+        writeTextContent(timer, timerCount);
         localStorage.setItem('timerCount', `${timerCount}`);
     },1000);    
-}
+})
