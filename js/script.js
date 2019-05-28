@@ -1,25 +1,22 @@
-const clock = document.querySelector('.clockIsTimed');
-const clear = document.querySelector('.clear');
+function render() {
+  const counter = document.querySelector('.clockIsTimed');
+  const clear = document.querySelector('.clear');
+  let time = localStorage.getItem('counter') || 0;
 
-let count;
+  function storageCount() {
+    counter.textContent = time;
+    localStorage.setItem('counter', time);
+  }
 
-if (!localStorage.getItem('time')) {
-  count = 0;
-  clock.innerHTML = count;
+  setInterval( () => {
+    time++;
+    storageCount();
+  }, 1000);
 
-} else {
-  count = localStorage.getItem('time');
+  storageCount()
+  clear.addEventListener('click', (event) => {
+    time = -1;
+  });
 }
 
-setInterval(() => {
-  count++;
-  clock.innerHTML = count;
-}, 1000);
-
-
-clear.addEventListener('click', (event) => {
-  event.preventDefault();
-  count = 0;
-});
-
-window.onunload = () => localStorage.setItem('time', count);
+window.addEventListener('load', render);
