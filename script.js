@@ -22,7 +22,7 @@ function timeHandler(time) {
   let minutes = parseInt(time / 60) % 60;
   minutes = minutes < 10 ? `0${minutes}` : minutes;
   let hours = Math.floor(time / 21600);
-  hours = hours < 10 ? `0${hours}` : hours);
+  hours = hours < 10 ? `0${hours}` : hours;
   const timeHMS = `${hours} : ${minutes} : ${seconds}`;
   container.textContent = timeHMS;
 }
