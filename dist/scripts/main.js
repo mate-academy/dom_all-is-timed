@@ -1,18 +1,21 @@
 'use strict';
 
 const counter = document.querySelector('.counter');
-let i = 0;
+let seconds = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
-  const num = localStorage.getItem('count');
-  if (num) {
-    i = num;
+  if (localStorage.getItem('count')) {
+    seconds = localStorage.getItem('count');
   }
-  counter.innerHTML = i;
+  render(seconds);
 });
 
 setInterval(function() {
-  i++;
-  localStorage.setItem('count', i);
-  counter.innerHTML = i;
+  seconds++;
+  localStorage.setItem('count', seconds);
+  render();
 }, 1000);
+
+function render() {
+  counter.innerHTML = seconds;
+}
