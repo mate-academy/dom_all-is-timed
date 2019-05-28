@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  height: 100vh; //castom size
+}
+
+.counterTime {
+  border: 1px solid black;
+  padding: 10px;
+  width: 170px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #eee;
+}
