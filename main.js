@@ -1,8 +1,9 @@
 'use strict';
-function makeSortable(elem) {
+function countTimeOnPage(elem) {
   let timeOnPage = localStorage.getItem('timeOnPage');
   let counterContainer = document.createElement('p');
   elem.append(counterContainer);
+  counterContainer.textContent = timeOnPage;
   
   setInterval(() => {
     timeOnPage++;
@@ -10,4 +11,4 @@ function makeSortable(elem) {
     counterContainer.textContent = timeOnPage;
   }, 1000);
   }
-makeSortable(document.querySelector('body'));  
+  countTimeOnPage(document.querySelector('body'));  
