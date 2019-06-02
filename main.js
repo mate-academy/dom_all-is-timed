@@ -1,19 +1,13 @@
 'use strict';
-function makeSortable (elem) {
-  var timeOnPage = localStorage.getItem("timeOnPage");
-  let append = document.createElement('p');
-
-  setInterval(function() {
-    append.remove();
+function makeSortable(elem) {
+  let timeOnPage = localStorage.getItem('timeOnPage');
+  let counterContainer = document.createElement('p');
+  elem.append(counterContainer);
+  
+  setInterval(() => {
     timeOnPage++;
-    
-    localStorage.setItem("timeOnPage", timeOnPage);
-    append.innerHTML = timeOnPage;
-    elem.append(append);
-    console.log(timeOnPage);
+    localStorage.setItem('timeOnPage', timeOnPage);
+    counterContainer.textContent = timeOnPage;
   }, 1000);
- 
   }
-makeSortable (
-  document.querySelector('body')
-);  
+makeSortable(document.querySelector('body'));  
