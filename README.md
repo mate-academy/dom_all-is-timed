@@ -1,4 +1,5 @@
 # All is Timed
+GH-Pages https://sherjlok15.github.io/dom_all-is-timed/
 
 1) Using `setInterval`, create a page that would display the number of seconds the user spent on it. It will start by displaying `0`, after 1 second it will replace `0` with `1`, after another second it will show `2` and so on.
 
